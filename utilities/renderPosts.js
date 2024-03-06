@@ -1,12 +1,13 @@
 export const posts = [
   {
-    name: "Vincent van Gogh",
-    username: "vincey1853",
-    location: "Zundert, Netherlands",
+    name: "Minh Pahm",
+    username: "mintpahm",
+    location: "Tokyo, Japan",
     avatar: "./assets/images/avatar/minh-pham-avatar.jpg",
     post: "./assets/images/post/PC-Plant.jpg",
-    comment: "just took a few mushrooms lol",
-    likes: 21,
+    comment:
+      "I love plants and PCs so I thought to put them together and share my own",
+    likes: 121,
   },
   {
     name: "Gustave Courbet",
