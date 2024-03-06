@@ -1,6 +1,6 @@
 import { postsArray } from "./postsData.js";
 export const renderPosts = () => {
-  const postsContainerEl = document.querySelector(".posts");
+  const postsContainerEl = document.querySelector(".feed");
 
   postsArray.forEach((post) => {
     const postContainer = document.createElement("div");
@@ -22,11 +22,11 @@ export const renderPosts = () => {
       <div class="px-2 py-4 grid gap-2 items-center">
         <div class="post__icons flex items-center gap-[.7rem]">
           <img class="w-6 hover:cursor-pointer" src="./assets/images/icons/icon-heart.png"
-              alt="heart-icon" aria-label="Like post">
+              alt="heart-icon" role="button" aria-label="Like post">
           <img class="w-6 hover:cursor-pointer" src="./assets/images/icons/icon-comment.png"
-              alt="comment-icon" aria-label="Comment on post">
+              alt="comment-icon" role="button" aria-label="Comment on post">
           <img class="w-6 hover:cursor-pointer" src="./assets/images/icons/icon-share.png"
-              alt="share-icon" aria-label="Share post">
+              alt="share-icon" role="button" aria-label="Share post">
         </div>
 
         <span class="post__likes font-bold">${post.likes} likes</span>
