@@ -8,8 +8,9 @@ export const renderPosts = () => {
       avatar: "./assets/images/avatars/minh-pham-avatar.jpg",
       photo: "./assets/images/post/PC-Plant.jpg",
       comment:
-        "I love plants and PCs so I thought to put them together and share my own",
+        "Chillin' with my trusty sidekicks: my PC and my plant babies 🌿💻 There's something oddly satisfying about the mix of tech and greenery in my space. Got my setup ready for a day of productivity and maybe a little gaming break in between watering sessions.",
       likes: 121,
+      hastags: "#TechAndNature #WorkspaceVibes",
     },
     {
       name: "Alex Suprun",
@@ -17,8 +18,10 @@ export const renderPosts = () => {
       location: "New York, USA",
       avatar: "./assets/images/avatars/alex-suprun-avatar.jpg",
       photo: "./assets/images/post/PC-Red.jpg",
-      comment: "Red is my world and so is my PC!",
+      comment:
+        "Spent hours customizing my PC rig, and it was totally worth it! Now it's as unique as my gaming style. 🎨🕹️",
       likes: 50,
+      hastags: "#PCMasterRace #CustomBuild",
     },
     {
       name: "Alexander Hipp",
@@ -26,8 +29,10 @@ export const renderPosts = () => {
       location: "Oslo, Norway",
       avatar: "./assets/images/avatars/alexander-hipp-avatar.jpg",
       photo: "./assets/images/post/PC-Green.jpg",
-      comment: "Lorem Ipsum dolor sit amet, consectetur",
+      comment:
+        "Meet my trusty companion for late-night coding sessions and gaming marathons! Who needs sleep when you have a setup like this? 😎💻",
       likes: 121,
+      hastags: "#CodingLife #Gamer",
     },
     {
       name: "Olivia Jackson",
@@ -35,8 +40,10 @@ export const renderPosts = () => {
       location: "London, United Kingdom",
       avatar: "./assets/images/avatars/olivia-jackson-avatar.jpg",
       photo: "./assets/images/post/PC-Cat.jpg",
-      comment: "Lorem ipsum dolor sit amet, consectetur",
+      comment:
+        "No better feeling than coming home to my beloved cat and PC setup after a long day 🏠🐈💻",
       likes: 121,
+      hastags: "#HomeSweetHome",
     },
     {
       name: "Aiony Haust",
@@ -44,8 +51,10 @@ export const renderPosts = () => {
       location: "Seoul, South Korea",
       avatar: "./assets/images/avatars/aiony-haust-avatar.jpg",
       photo: "./assets/images/post/PC-PurpleTeal.jpg",
-      comment: "Lorem ipsum dolor sit amet, consectetur",
+      comment:
+        "Just upgraded my setup with some RGB goodness! Who needs sunlight when you have these neon lights? 🌈✨",
       likes: 121,
+      hastags: "#PCGaming",
     },
     {
       name: "Vicky Hladynets",
@@ -53,8 +62,10 @@ export const renderPosts = () => {
       location: "Kyiv, Ukraine",
       avatar: "./assets/images/avatars/vicky-hladynets-avatar.jpg",
       photo: "./assets/images/post/PC-White.jpg",
-      comment: "Lorem ipsum dolor sit amet, consectetur",
+      comment:
+        "Just a casual snapshot of my cozy corner 🖥️! Work, play, and everything in between happens right here. Who else feels like their PC is an extension of themselves?",
       likes: 121,
+      hastags: "#CozySetup #HomeOffice",
     },
     {
       name: "Diego Hernandez",
@@ -63,8 +74,9 @@ export const renderPosts = () => {
       avatar: "./assets/images/avatars/diego-hernandez-avatar.jpg",
       photo: "./assets/images/post/PC-Blue.jpg",
       comment:
-        "I love plants and PCs so I thought to put them together and share my own",
+        "New setup vibes! Just leveled up my PC game and couldn't resist showing it off 🚀 Loving these icy cold lights giving the whole room that futuristic feel ❄️ Ready to dive into some serious gaming sessions now! 💻🎮",
       likes: 121,
+      hastags: "#PCMasterRace #ColdLights #GamingSetup",
     },
     {
       name: "Luis Villasmil",
@@ -73,8 +85,9 @@ export const renderPosts = () => {
       avatar: "./assets/images/avatars/luis-villasmil-avatar.jpg",
       photo: "./assets/images/post/PC-DarkBG.jpg",
       comment:
-        "I love plants and PCs so I thought to put them together and share my own",
+        "Geeking out over my latest tech addition 🤓! This beast of a machine is ready to tackle anything I throw at it. Let's see what kind of creative projects we can cook up together!",
       likes: 121,
+      hastags: "#TechEnthusiast #CreativeMinds",
     },
   ];
 
@@ -107,7 +120,7 @@ export const renderPosts = () => {
 
         <span class="post__likes font-bold">${post.likes} likes</span>
 
-        <p class="user-comment"> <span class="font-bold">${post.username}</span> ${post.comment} </p>
+        <p class="user-comment"> <span class="font-bold">${post.username}</span> ${post.comment}  <span class="font-bold">${post.hastags}</span></p>
       </div>  
     `;
 
