@@ -16,31 +16,50 @@
     <title>GameStation</title>
 </head>
 
-<body>
+<body class="grid place-content-center text-[.875rem] bg-slate-500">
     <main>
-        <section>
-            <header>
-                <img src="./assets/images/logo.png" alt="">
-                <!-- User avatar -->
+        <section class="shadow-sm max-w-xs bg-white">
+            <header class="flex items-center justify-between p-2 border-b-2 border-gray-400">
+                <div class="logo">
+                    <img class="w-36" src="./assets/images/logo.png" alt="">
+                </div>
+                <div class="account-avatar">
+                    <img class="w-10 rounded-full mr-2" src="./assets/images/avatars/user-avatar.jpg" alt="">
+                </div>
             </header>
-            <div class="posts">
+            <div class="posts grid gap-4">
 
                 <div class="post">
 
-                    <div class="user-info">
-                        <!-- avatar-->
-                        <div>
-                            <!-- Name -->
-                            <!-- Location -->
+                    <div class="user-info grid grid-cols-[.1fr.8fr] gap-2 p-2 items-center justify-start ">
+                        <img class="user-avatar rounded-full w-10" src="./assets/images/avatars/minh-pham-avatar.jpg"
+                            alt="">
+                        <div class="grid">
+                            <p class="font-bold">Minh Pahm</p>
+                            <p class="text-[.75rem]">Tokyo, Japan</p>
                         </div>
                     </div>
-                    <!-- <img class="post__image" src="" alt=""> -->
-                    <div>
-                        <div class="post__icons">
 
+                    <div class="post__image">
+                        <img src="./assets/images/post/PC-Plant.jpg" alt="">
+                    </div>
+
+                    <div class="px-2 py-4 grid gap-2 items-center">
+                        <div class="post__icons flex items-center gap-[.7rem]">
+                            <img class="w-6 hover:cursor-pointer" src="./assets/images/icons/icon-heart.png"
+                                alt="heart-icon" aria-label="Like post">
+                            <img class="w-6 hover:cursor-pointer" src="./assets/images/icons/icon-comment.png"
+                                alt="comment-icon" aria-label="Comment on post">
+                            <img class="w-6 hover:cursor-pointer" src="./assets/images/icons/icon-share.png"
+                                alt="share-icon" aria-label="Share post">
                         </div>
-                        <div class="post__likes"></div>
-                        <p class="user-comment"></p>
+
+                        <span class="post__likes font-bold">121 likes</span>
+
+                        <p class="user-comment"> <span class="font-bold">mintpahm</span> I
+                            love plants and PCs so I thought to put them
+                            together and share my own.
+                        </p>
                     </div>
                 </div>
             </div>

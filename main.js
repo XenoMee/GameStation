@@ -1,1 +1,1 @@
-import { posts } from "./utilities/data.js";
+import { renderPosts } from "./utilities/data.js";
