@@ -4,7 +4,7 @@ export const renderPosts = () => {
 
   postsArray.forEach((post) => {
     const postContainer = document.createElement("div");
-    postContainer.className = "post";
+    postContainer.className = "post bg-white";
 
     postContainer.innerHTML += `
       <div class="user-info grid grid-cols-[.1fr.8fr] gap-2 p-2 items-center justify-start ">
