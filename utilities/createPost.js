@@ -1,4 +1,4 @@
-export const createPostHeader = (post) => {
+const createPostHeader = (post) => {
   return `
   <div class="user-info grid grid-cols-[.1fr.8fr] gap-2 p-2 items-center justify-start ">
     <img class="user-avatar rounded-full" src="${post.avatar}" alt="">
@@ -10,7 +10,7 @@ export const createPostHeader = (post) => {
   `;
 };
 
-export const createPostPhoto = (post) => {
+const createPostPhoto = (post) => {
   return `
     <div class="post__image">
         <img src="${post.photo}" alt="">
@@ -18,7 +18,7 @@ export const createPostPhoto = (post) => {
   `;
 };
 
-export const createPostButtons = (post) => {
+const createPostButtons = () => {
   return `
     <div class="px-2 py-4 grid gap-2 items-center">
         <div class="post__icons flex items-center gap-[.7rem]">
@@ -35,7 +35,7 @@ export const createPostButtons = (post) => {
   `;
 };
 
-export const createPostDescription = (post) => {
+const createPostDescription = (post) => {
   return `
     <div class="post-description">
         <p><span class="post__likes font-bold">${post.likes}</span> likes</p>
@@ -43,4 +43,18 @@ export const createPostDescription = (post) => {
         <p class="user-comment"> <span class="font-bold">${post.username}</span> ${post.comment}  <span class="font-bold">${post.hastags}</span></p>
     </div>
   `;
+};
+
+export const createPost = (post) => {
+  const postEl = document.createElement("div");
+  postEl.className = "post bg-white";
+
+  postEl.innerHTML += `
+    ${createPostHeader(post)}
+    ${createPostPhoto(post)}
+    ${createPostButtons(post)}
+    ${createPostDescription(post)}
+  `;
+
+  return postEl;
 };
