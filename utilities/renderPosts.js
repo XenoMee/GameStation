@@ -1,5 +1,5 @@
 import { postsArray } from "./postsData.js";
-import * as createPost from "./createPost.js";
+import * as postBody from "./createPost.js";
 
 export const renderPosts = () => {
   const postsContainerEl = document.querySelector(".feed");
@@ -9,10 +9,10 @@ export const renderPosts = () => {
     postContainer.className = "post bg-white";
 
     postContainer.innerHTML += `
-      ${createPost.createPostHeader(post)}
-      ${createPost.createPostPhoto(post)}
-      ${createPost.createPostButtons(post)}
-      ${createPost.createPostDescription(post)}
+      ${postBody.createPostHeader(post)}
+      ${postBody.createPostPhoto(post)}
+      ${postBody.createPostButtons(post)}
+      ${postBody.createPostDescription(post)}
     `;
 
     postsContainerEl.appendChild(postContainer);
