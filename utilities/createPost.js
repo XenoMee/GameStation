@@ -1,7 +1,7 @@
 const createPostHeader = (post) => {
   return `
   <div class="user-info grid grid-cols-[.1fr.8fr] gap-2 p-2 items-center justify-start ">
-    <img class="user-avatar rounded-full" src="${post.avatar}" alt="">
+    <img class="user-avatar rounded-full min-w-8" src="${post.avatar}" alt="">
       <div class="grid">
         <p class="font-bold">${post.name}</p>
         <p class="text-[.75rem]">${post.location}</p>
