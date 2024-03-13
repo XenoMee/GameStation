@@ -83,7 +83,7 @@ export const postsArray = [
     avatar: "./assets/images/avatars/luis-villasmil-avatar.jpg",
     photo: "./assets/images/post/PC-DarkBG.jpg",
     comment:
-      "Geeking out over my latest tech addition 🤓! This beast of a machine is ready to tackle anything I throw at it. Let's see what kind of creative projects we can cook up together!",
+      "Geeking out over my latest tecuseh addition 🤓! This beast of a machine is ready to tackle anything I throw at it. Let's see what kind of creative projects we can cook up together!",
     likes: 121,
     hastags: "#TechEnthusiast #CreativeMinds",
   },
