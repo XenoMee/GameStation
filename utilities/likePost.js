@@ -13,7 +13,8 @@ export const handlePostLike = () => {
 
   const updateLikeStatus = (post) => {
     const likeBtn = post.querySelector(".btn-like");
-    const heartIcon = likeBtn.querySelector(".icon-heart");
+    const heartIcon = likeBtn.querySelector(".fa-heart");
+    console.log(heartIcon);
     const postLikes = post.querySelector(".post-likes");
     let likeCount = { value: Number(postLikes.textContent) };
     let isLiked = post.getAttribute("data-liked") === "true";
@@ -28,12 +29,12 @@ export const handlePostLike = () => {
 
   const dislikePost = (button, icon, likesNumber) => {
     button.classList.remove("text-red-500");
-    icon.classList.remove("fill-red-500");
+    icon.classList.remove("fa-solid");
     likesNumber.value--;
   };
   const likePost = (button, icon, likesNumber) => {
     button.classList.add("text-red-500");
-    icon.classList.add("fill-red-500");
+    icon.classList.add("fa-solid");
     likesNumber.value++;
   };
 };
