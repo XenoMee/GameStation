@@ -2,8 +2,8 @@ import { postsContainerEl } from "./renderPosts.js";
 
 export const handlePostLike = () => {
   const getPostClick = (e) => {
-    const postEl = e.target.closest(".post");
-    const likeEl = e.target.closest("[data-action='like']");
+    const postEl = postsContainerEl.querySelector(".post");
+    const likeEl = e.target.parentElement.dataset.action;
     if (!postEl) return;
 
     if (likeEl) updateLikeStatus(postEl);
