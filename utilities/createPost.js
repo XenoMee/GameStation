@@ -23,13 +23,13 @@ const createPostButtons = () => {
     <div class="px-2 py-4 grid gap-2 items-center">
         <div class="post__icons flex items-center gap-[.7rem]">
           <button class = "btn-like hover:cursor-pointer" data-action="like">
-            <i class="fa-regular fa-heart"></i>
+            <i class="text-lg fa-regular fa-heart"></i>
           </button>
           <button class = "hover:cursor-pointer">
-            <i class="fa-regular fa-comment-dots"></i>
+            <i class="text-lg fa-regular fa-comment-dots"></i>
           </button>
           <button class= "hover:cursor-pointer">
-            <i class="fa-regular fa-paper-plane"></i>
+            <i class="text-lg fa-regular fa-paper-plane"></i>
           </button>
     </div>
   `;
