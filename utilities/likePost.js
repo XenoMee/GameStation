@@ -29,11 +29,13 @@ export const handlePostLike = () => {
 
   const dislikePost = (button, icon, likesNumber) => {
     button.classList.remove("text-red-500");
+    button.classList.add("hover:opacity-50");
     icon.classList.remove("fa-solid");
     likesNumber.value--;
   };
   const likePost = (button, icon, likesNumber) => {
     button.classList.add("text-red-500");
+    button.classList.remove("hover:opacity-50");
     icon.classList.add("fa-solid");
     likesNumber.value++;
   };
