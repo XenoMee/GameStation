@@ -67,7 +67,7 @@ const createDescription = (post) => {
 
 export const createPost = (post) => {
   const postEl = document.createElement("div");
-  postEl.className = "post bg-white py-2";
+  postEl.className = "post bg-white py-2 border-b-2 border-gray-500";
   postEl.setAttribute("data-liked", "false");
 
   postEl.innerHTML += `
