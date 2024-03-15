@@ -1,4 +1,4 @@
-const createPostHeader = (post) => {
+const createHeader = (post) => {
   return `
   <div class="user-info grid grid-cols-[.1fr.8fr] gap-2 p-2 items-center justify-start ">
     <img class="user-avatar rounded-full min-w-8" src="${post.avatar}" alt="">
@@ -10,7 +10,7 @@ const createPostHeader = (post) => {
   `;
 };
 
-const createPostPhoto = (post) => {
+const createPhoto = (post) => {
   return `
     <div class="post-image" data-action="like">
         <img src="${post.photo}" alt="">
@@ -18,7 +18,7 @@ const createPostPhoto = (post) => {
   `;
 };
 
-const createPostButtons = () => {
+const createButtons = () => {
   return `
     <div class="px-2 py-4 grid gap-2 items-center">
         <div class="post__icons flex items-center gap-[.7rem]">
@@ -35,7 +35,7 @@ const createPostButtons = () => {
   `;
 };
 
-const createPostDescription = (post) => {
+const createDescription = (post) => {
   return `
     <div class="post-description">
         <p><span class="post-likes font-bold">${post.likes}</span> likes</p>
@@ -51,10 +51,10 @@ export const createPost = (post) => {
   postEl.setAttribute("data-liked", "false");
 
   postEl.innerHTML += `
-    ${createPostHeader(post)}
-    ${createPostPhoto(post)}
-    ${createPostButtons(post)}
-    ${createPostDescription(post)}
+    ${createHeader(post)}
+    ${createPhoto(post)}
+    ${createButtons(post)}
+    ${createDescription(post)}
   `;
 
   return postEl;
