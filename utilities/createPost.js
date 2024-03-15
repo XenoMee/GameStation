@@ -1,6 +1,6 @@
 const createHeader = (post) => {
   return `
-  <div class="user-info grid grid-cols-[.1fr.8fr] gap-2 p-2 items-center justify-start ">
+  <div class="user-info grid grid-cols-[.1fr.8fr] gap-2 px-2 pb-2 items-center justify-start ">
     <img class="user-avatar rounded-full min-w-8" src="${post.avatar}" alt="">
       <div class="grid">
         <p class="font-bold">${post.name}</p>
@@ -20,24 +20,33 @@ const createPhoto = (post) => {
 
 const createButtons = () => {
   return `
-    <div class="px-2 py-4 grid gap-2 items-center">
-        <div class="post__icons flex items-center gap-[.7rem]">
-          <button class = "btn-like hover:cursor-pointer" data-action="like">
-            <i class="text-lg fa-regular fa-heart"></i>
-          </button>
-          <button class = "hover:cursor-pointer">
-            <i class="text-lg fa-regular fa-comment-dots"></i>
-          </button>
-          <button class= "hover:cursor-pointer">
-            <i class="text-lg fa-regular fa-paper-plane"></i>
-          </button>
+    <div class="p-2 grid gap-2 items-center">
+        <div class="post__icons flex items-center justify-between">
+          <div class="primary-icons flex gap-[.7rem]">
+            <button class = "btn-like hover:cursor-pointer" data-action="like">
+              <i class="text-lg fa-regular fa-heart"></i>
+            </button>
+            <button class = "hover:cursor-pointer">
+              <i class="text-lg fa-regular fa-comment-dots"></i>
+            </button>
+            <button class= "hover:cursor-pointer">
+              <i class="text-lg fa-regular fa-paper-plane"></i>
+            </button>
+          </div>
+          <div class="secondary-icons flex items-center">
+            <button class= "save-btn hover:cursor-pointer">
+              <i class="text-lg fa-regular fa-bookmark"></i>
+            </button>
+          </div>
+
+        </div>
     </div>
   `;
 };
 
 const createDescription = (post) => {
   return `
-    <div class="post-description">
+    <div class="px-2 post-description">
         <p><span class="post-likes font-bold">${post.likes}</span> likes</p>
 
         <p class="user-comment"> <span class="font-bold">${post.username}</span> ${post.comment}  <span class="font-bold">${post.hastags}</span></p>
@@ -47,7 +56,7 @@ const createDescription = (post) => {
 
 export const createPost = (post) => {
   const postEl = document.createElement("div");
-  postEl.className = "post bg-white";
+  postEl.className = "post bg-white py-2";
   postEl.setAttribute("data-liked", "false");
 
   postEl.innerHTML += `
