@@ -1,11 +1,22 @@
 const createHeader = (post) => {
   return `
-  <div class="user-info grid grid-cols-[.1fr.8fr] gap-2 px-2 pb-2 items-center justify-start ">
-    <img class="user-avatar rounded-full min-w-8" src="${post.avatar}" alt="">
+  <div class="post__header px-2 pb-2 flex items-center justify-between">
+    <div class="user-info grid grid-cols-[.1fr.9fr] gap-2  items-center justify-start">
+      <div class="user-avatar">
+        <img class="rounded-full min-w-8" src="${post.avatar}" alt="">
+      </div>
       <div class="grid">
         <p class="font-bold">${post.name}</p>
         <p class="text-[.75rem]">${post.location}</p>
       </div>
+    </div>
+
+    <div>
+      <button class="text-lg hover:cursor-pointer hover:opacity-50">
+      <i class="fa-solid fa-ellipsis"></i>
+      </button>
+     </div>
+
   </div>
   `;
 };
@@ -13,7 +24,7 @@ const createHeader = (post) => {
 const createPhoto = (post) => {
   return `
     <div class="post-image" data-action="like">
-        <img src="${post.photo}" alt="">
+        <img class="rounded-md" src="${post.photo}" alt="">
     </div>
   `;
 };
@@ -23,18 +34,18 @@ const createButtons = () => {
     <div class="p-2 grid gap-2 items-center">
         <div class="post__icons flex items-center justify-between">
           <div class="primary-icons flex gap-[.7rem]">
-            <button class = "btn-like hover:cursor-pointer" data-action="like">
+            <button class = "btn-like hover:cursor-pointer hover:opacity-50" data-action="like">
               <i class="text-lg fa-regular fa-heart"></i>
             </button>
-            <button class = "hover:cursor-pointer">
+            <button class = "hover:cursor-pointer hover:opacity-50">
               <i class="text-lg fa-regular fa-comment-dots"></i>
             </button>
-            <button class= "hover:cursor-pointer">
+            <button class= "hover:cursor-pointer hover:opacity-50">
               <i class="text-lg fa-regular fa-paper-plane"></i>
             </button>
           </div>
           <div class="secondary-icons flex items-center">
-            <button class= "save-btn hover:cursor-pointer">
+            <button class= "save-btn hover:cursor-pointer hover:opacity-50">
               <i class="text-lg fa-regular fa-bookmark"></i>
             </button>
           </div>
