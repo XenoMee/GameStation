@@ -60,7 +60,7 @@ const createDescription = (post) => {
     <div class="post-description">
         <p><span class="post-likes font-bold">${post.likes}</span> likes</p>
 
-        <p class="user-comment"> <span class="font-bold">${post.username}</span> ${post.comment}  <span class="font-bold">${post.hastags}</span></p>
+        <p class="user-comment"> <span class="font-bold">${post.username}</span> ${post.description}  <span class="font-bold">${post.hastags}</span></p>
     </div>
   `;
 };
