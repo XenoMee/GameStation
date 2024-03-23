@@ -3,7 +3,7 @@ const createHeader = (post) => {
   <div class="post__header px-2 pb-4 flex items-center justify-between">
     <div class="user-info flex gap-2 items-center justify-start">
       <div class="user-avatar">
-        <img class="rounded-full max-w-10" src="${post.avatar}" alt="">
+        <img class="rounded-full max-w-8" src="${post.avatar}" alt="">
       </div>
       <div class="grid leading-tight">
         <p class="font-bold">${post.name}</p>
