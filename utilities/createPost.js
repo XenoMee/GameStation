@@ -1,9 +1,9 @@
 const createHeader = (post) => {
   return `
   <div class="post__header px-2 pb-4 flex items-center justify-between">
-    <div class="user-info grid grid-cols-[.1fr.9fr] gap-2 items-center justify-start">
+    <div class="user-info flex gap-2 items-center justify-start">
       <div class="user-avatar">
-        <img class="rounded-full min-w-8" src="${post.avatar}" alt="">
+        <img class="rounded-full max-w-10" src="${post.avatar}" alt="">
       </div>
       <div class="grid leading-tight">
         <p class="font-bold">${post.name}</p>
@@ -24,7 +24,7 @@ const createHeader = (post) => {
 const createPhoto = (post) => {
   return `
     <div class="post-image" data-action="like">
-        <img class="rounded-md" src="${post.photo}" alt="">
+        <img class="rounded-md mx-auto" src="${post.photo}" alt="">
     </div>
   `;
 };
