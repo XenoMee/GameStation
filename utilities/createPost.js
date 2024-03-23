@@ -1,6 +1,6 @@
 const createHeader = (post) => {
   return `
-  <div class="post__header pb-4 flex items-center justify-between">
+  <div class="post__header px-2 pb-4 flex items-center justify-between">
     <div class="user-info grid grid-cols-[.1fr.9fr] gap-2 items-center justify-start">
       <div class="user-avatar">
         <img class="rounded-full min-w-8" src="${post.avatar}" alt="">
@@ -31,7 +31,7 @@ const createPhoto = (post) => {
 
 const createButtons = () => {
   return `
-    <div class="py-2 grid gap-2 items-center">
+    <div class="p-2 grid gap-2 items-center">
         <div class="post__icons flex items-center justify-between">
           <div class="primary-icons flex gap-[.7rem]">
             <button class = "btn-like hover:cursor-pointer hover:opacity-50" data-action="like">
@@ -57,7 +57,7 @@ const createButtons = () => {
 
 const createDescription = (post) => {
   return `
-    <div class="post-description">
+    <div class="post-description px-2">
         <p><span class="post-likes font-bold">${post.likes}</span> likes</p>
 
         <p class="user-comment"> <span class="font-bold">${post.username}</span> ${post.description}  <span class="font-bold">${post.hastags}</span></p>
@@ -66,9 +66,9 @@ const createDescription = (post) => {
 };
 
 export const createPost = (post) => {
-  const postEl = document.createElement("div");
-  postEl.className = "post bg-white px-2 py-4";
-  postEl.setAttribute("data-liked", "false");
+  const postEl = document.createElement('div');
+  postEl.className = 'post bg-white py-4';
+  postEl.setAttribute('data-liked', 'false');
 
   postEl.innerHTML += `
     ${createHeader(post)}
